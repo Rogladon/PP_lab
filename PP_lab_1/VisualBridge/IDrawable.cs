@@ -20,7 +20,7 @@ namespace VisualBridge {
 		/// </summary>
 		/// <param name="g">Графичексий контекст</param>
 		/// <param name="n">Качество отрисовки линии</param>
-		void Draw(IGraphicContext g, int n);
+		void Draw();
 		/// <summary>
 		/// Смена моста
 		/// </summary>

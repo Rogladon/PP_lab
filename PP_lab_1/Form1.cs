@@ -46,9 +46,9 @@ namespace PP_lab_1 {
 		private void generate2_Click(object sender, EventArgs e) {
 			if (winContext1 == null || winContext2 == null) InitCurve();
 			var curve = GenerateCurve();
-			curve.Draw(winContext1, 100);
-			curve.SetDrawScheme(new DrawScheme2());
-			curve.Draw(winContext2, 100);
+			curve.Draw();
+			curve.SetDrawScheme(new DrawScheme2(winContext2));
+			curve.Draw();
 		}
 		private void save1_Click(object sender, EventArgs e) {
 			SaveSvg(winContext1);
@@ -59,7 +59,7 @@ namespace PP_lab_1 {
 		}
 		#endregion
 		private VisualCurve GenerateCurve() {
-			return new VisualCurve(new Bezier(RandomPoint, RandomPoint, RandomPoint, RandomPoint), new DrawScheme1());
+			return new VisualCurve(new Bezier(RandomPoint, RandomPoint, RandomPoint, RandomPoint), new DrawScheme1(winContext1),100);
 		}
 		private void SaveSvg(IGraphicContext context) {
 			if (svgContext == null) InitCurve();

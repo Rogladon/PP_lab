@@ -14,6 +14,7 @@ namespace VisualBridge {
 		#region Fields
 		private ICurve curve;
 		private IDrawScheme drawScheme;
+		private int detail;
 		#endregion
 
 		#region Properties
@@ -23,20 +24,20 @@ namespace VisualBridge {
 
 		#region Constructs
 
-		public VisualCurve(ICurve curve, IDrawScheme d) {
+		public VisualCurve(ICurve curve, IDrawScheme d, int detail) {
 			this.curve = curve;
 			this.drawScheme = d;
+			this.detail = detail;
 		}
 		#endregion
 
 		#region Realization IDrawable
-		public void Draw(GraphicsSystem.IGraphicContext g, int n) {
-			var points = Enumerable.Range(0, n)
-				.Select(p => GetPoint((double)p / n)).ToArray();
-			g.AddRange(DrawScheme.DrawStart(points[0], points[1].Minus(points[0])));
-			g.AddRange(DrawScheme.DrawLines(points));
-			g.AddRange(DrawScheme.DrawEnd(points[n-1], points[n-2].Minus(points[n-1])));
-			g.Draw();
+		public void Draw() {
+			var points = Enumerable.Range(0, detail)
+				.Select(p => GetPoint((double)p / detail)).ToArray();
+			DrawScheme.DrawStart(points[0], points[1].Minus(points[0]));
+			DrawScheme.DrawLines(points);
+			DrawScheme.DrawEnd(points[detail - 1], points[detail - 2].Minus(points[detail-1]));
 		}
 		public void SetDrawScheme(IDrawScheme drawScheme) {
 			this.drawScheme = drawScheme;

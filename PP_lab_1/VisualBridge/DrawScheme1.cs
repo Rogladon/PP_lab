@@ -6,11 +6,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Svg;
+using GraphicsSystem;
 using GraphicsSystem.GraphicsObjects;
 
 namespace VisualBridge {
 	public class DrawScheme1 : IDrawScheme {
-		public IEnumerable<IGraphicObject> DrawEnd(IPoint point, IPoint direction) {
+		private IGraphicContext context;
+		public DrawScheme1(IGraphicContext graphic) {
+			context = graphic;
+		}
+		public void DrawEnd(IPoint point, IPoint direction) {
 			List<IGraphicObject> graphicObjects = new List<IGraphicObject>();
 			direction = direction.Normalize().Multiple(10);
 			IPoint a1 = new Geometry.Point(
@@ -23,21 +28,28 @@ namespace VisualBridge {
 				);
 			graphicObjects.Add(new GraphicsSystem.GraphicsObjects.Line(point, Color.Red, 2, point,a1.Plus(point)));
 			graphicObjects.Add(new GraphicsSystem.GraphicsObjects.Line(point, Color.Red, 2, point,a2.Plus(point)));
-			return graphicObjects;
+			context.AddRange(graphicObjects);
+			context.Draw();
 		}
 
-		public IEnumerable<IGraphicObject> DrawLines(IPoint[] point) {
+		public void DrawLines(IPoint[] point) {
 			List<IGraphicObject> graphicObjects = new List<IGraphicObject>();
 			graphicObjects.Add(
 					new GraphicsSystem.GraphicsObjects.Patch(
 						point[0], Color.Green, 2, point.ToList()));
-			return graphicObjects;
+			context.AddRange(graphicObjects);
+			context.Draw();
 		}
 
-		public IEnumerable<IGraphicObject> DrawStart(IPoint point, IPoint direction) {
+		public void DrawStart(IPoint point, IPoint direction) {
 			List<IGraphicObject> graphicObjects = new List<IGraphicObject>();
 			graphicObjects.Add(new Circle(point, Color.Green, 1, 5));
-			return graphicObjects;
+			context.AddRange(graphicObjects);
+			context.Draw();
+		}
+
+		public void SetGraphicContext(IGraphicContext context) {
+			this.context = context;
 		}
 	}
 }
