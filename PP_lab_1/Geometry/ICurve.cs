@@ -18,5 +18,6 @@ namespace Geometry {
 		/// <param name="t">От 0(начало кривой) до 1(конец кривой)</param>
 		/// <returns></returns>
 		IPoint GetPoint(double t);
+		float GetAlgoritm(float coeff, float step, Algoritm.IStrategyGetLenght strategy);
 	}
 }

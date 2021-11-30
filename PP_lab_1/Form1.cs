@@ -50,9 +50,9 @@ namespace PP_lab_1 {
 			curve.Draw();
 			curve.SetDrawScheme(new DrawScheme2(winContext2));
 			curve.Draw();
+			float lenght = curve.Curve.GetAlgoritm(0.5f, 0.01f, new GetLenghtCurve());
 			winContext1.Add(new GraphicsSystem.GraphicsObjects.Circle(
-				curve.Curve.GetPoint(new GetCoeffCurve().Operation(curve.Curve, 
-				new GetLenghtCurve().Operation(curve.Curve,0.5f,0.01f), 0.01f)),
+				curve.Curve.GetPoint(curve.Curve.GetAlgoritm(lenght,0.01f, new GetCoeffCurve())),
 				Color.Black,5f,5f));
 			winContext1.Draw();
 		}

@@ -34,6 +34,9 @@ namespace Geometry {
 			p = GetPoint(t);
 		}
 		public abstract IPoint GetPoint(double t);
+		public float GetAlgoritm(float coeff, float step, Algoritm.IStrategyGetLenght strategy) {
+			return strategy.Operation(this, coeff, step);
+		}
 		#endregion
 	}
 }
