@@ -15,5 +15,6 @@ namespace Geometry {
 		IPoint Minus(IPoint p);
 		IPoint Multiple(double d);
 		IPoint Normalize();
+		float Distance(IPoint p);
 	}
 }

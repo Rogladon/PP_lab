@@ -50,6 +50,10 @@ namespace Geometry {
 			double lenght = Math.Sqrt(x * x + y * y);
 			return new Point(x / lenght, y / lenght);
 		}
+
+		public float Distance(IPoint p) {
+			return (float)Math.Sqrt(Math.Pow((p.X - X), 2) + Math.Pow((p.Y - Y), 2));
+		}
 		#endregion
 
 	}

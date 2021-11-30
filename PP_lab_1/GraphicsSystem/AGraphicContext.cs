@@ -41,18 +41,22 @@ namespace GraphicsSystem {
 		abstract public void Draw();
 		public void Add(IGraphicObject graphicObject) {
 			graphicObjects.Add(graphicObject);
+			Draw();
 		}
 
 		public void AddRange(IEnumerable<IGraphicObject> graphicObjects) {
 			this.graphicObjects.AddRange(graphicObjects);
+			Draw();
 		}
 
 		public void Remove(IGraphicObject graphicObject) {
 			graphicObjects.Remove(graphicObject);
+			Draw();
 		}
 
 		public void RemoveAt(int index) {
 			graphicObjects.RemoveAt(index);
+			Draw();
 		}
 		public IEnumerator<IGraphicObject> GetEnumerator() {
 			return ((IEnumerable<IGraphicObject>)graphicObjects).GetEnumerator();

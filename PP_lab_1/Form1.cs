@@ -12,6 +12,7 @@ using Geometry;
 using Svg;
 using GraphicsSystem;
 using System.IO;
+using Geometry.Algoritm;
 
 namespace PP_lab_1 {
 	public partial class Form1 : Form {
@@ -49,6 +50,11 @@ namespace PP_lab_1 {
 			curve.Draw();
 			curve.SetDrawScheme(new DrawScheme2(winContext2));
 			curve.Draw();
+			winContext1.Add(new GraphicsSystem.GraphicsObjects.Circle(
+				curve.Curve.GetPoint(new GetCoeffCurve().Operation(curve.Curve, 
+				new GetLenghtCurve().Operation(curve.Curve,0.5f,0.01f), 0.01f)),
+				Color.Black,5f,5f));
+			winContext1.Draw();
 		}
 		private void save1_Click(object sender, EventArgs e) {
 			SaveSvg(winContext1);
