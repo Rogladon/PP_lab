@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using VisualBridge;
+using Visual;
 using Geometry;
 using Svg;
 using GraphicsSystem;

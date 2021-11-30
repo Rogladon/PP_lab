@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Drawing;
 using GraphicsSystem;
 
-namespace VisualBridge {
+namespace Visual {
 	/// <summary>
 	/// Интерфейс для отрисовка линий
 	/// </summary>

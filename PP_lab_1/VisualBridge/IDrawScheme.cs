@@ -7,7 +7,7 @@ using Geometry;
 using System.Drawing;
 using GraphicsSystem.GraphicsObjects;
 
-namespace VisualBridge {
+namespace Visual {
 	/// <summary>
 	/// Схема отрисовки
 	/// </summary>

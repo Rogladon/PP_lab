@@ -9,7 +9,7 @@ using Svg;
 using GraphicsSystem;
 using GraphicsSystem.GraphicsObjects;
 
-namespace VisualBridge {
+namespace Visual {
 	public class DrawScheme1 : IDrawScheme {
 		private IGraphicContext context;
 		public DrawScheme1(IGraphicContext graphic) {

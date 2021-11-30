@@ -3,10 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Drawing;
 
-namespace Visual {
-	public interface IDrawable {
-		void Draw(Graphics g);
+namespace Geometry {
+	interface IStategy {
 	}
 }

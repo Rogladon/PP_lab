@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Geometry;
 
-namespace VisualBridge {
+namespace Visual {
 	/// <summary>
 	/// Класс кривой с визуализацией
 	/// </summary>
