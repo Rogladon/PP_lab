@@ -25,14 +25,10 @@ namespace PP_lab_1 {
 		/// </summary>
 		private void InitializeComponent() {
 			this.pictureBox = new System.Windows.Forms.PictureBox();
-			this.generate2 = new System.Windows.Forms.Button();
-			this.label1 = new System.Windows.Forms.Label();
-			this.label2 = new System.Windows.Forms.Label();
-			this.save2 = new System.Windows.Forms.Button();
-			this.save1 = new System.Windows.Forms.Button();
-			this.pictureBox1 = new System.Windows.Forms.PictureBox();
+			this.Fragment = new System.Windows.Forms.Button();
+			this.MoveTo = new System.Windows.Forms.Button();
+			this.MoveTo2 = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// pictureBox
@@ -40,97 +36,62 @@ namespace PP_lab_1 {
 			this.pictureBox.BackColor = System.Drawing.SystemColors.Control;
 			this.pictureBox.Location = new System.Drawing.Point(5, 125);
 			this.pictureBox.Name = "pictureBox";
-			this.pictureBox.Size = new System.Drawing.Size(338, 323);
+			this.pictureBox.Size = new System.Drawing.Size(783, 323);
 			this.pictureBox.TabIndex = 0;
 			this.pictureBox.TabStop = false;
 			// 
-			// generate2
+			// Fragment
 			// 
-			this.generate2.Location = new System.Drawing.Point(347, 40);
-			this.generate2.Name = "generate2";
-			this.generate2.Size = new System.Drawing.Size(100, 23);
-			this.generate2.TabIndex = 3;
-			this.generate2.Text = "Генерация";
-			this.generate2.UseVisualStyleBackColor = true;
-			this.generate2.Click += new System.EventHandler(this.generate2_Click);
+			this.Fragment.Location = new System.Drawing.Point(12, 83);
+			this.Fragment.Name = "Fragment";
+			this.Fragment.Size = new System.Drawing.Size(104, 23);
+			this.Fragment.TabIndex = 4;
+			this.Fragment.Text = "Развернуть";
+			this.Fragment.UseVisualStyleBackColor = true;
+			this.Fragment.Click += new System.EventHandler(this.Fragment_Click);
 			// 
-			// label1
+			// MoveTo
 			// 
-			this.label1.AutoSize = true;
-			this.label1.Location = new System.Drawing.Point(147, 18);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(60, 17);
-			this.label1.TabIndex = 4;
-			this.label1.Text = "Схема 1";
+			this.MoveTo.Location = new System.Drawing.Point(135, 83);
+			this.MoveTo.Name = "MoveTo";
+			this.MoveTo.Size = new System.Drawing.Size(104, 23);
+			this.MoveTo.TabIndex = 5;
+			this.MoveTo.Text = "Сместить";
+			this.MoveTo.UseVisualStyleBackColor = true;
+			this.MoveTo.Click += new System.EventHandler(this.MoveTo_Click);
 			// 
-			// label2
+			// MoveTo2
 			// 
-			this.label2.AutoSize = true;
-			this.label2.Location = new System.Drawing.Point(593, 18);
-			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(60, 17);
-			this.label2.TabIndex = 5;
-			this.label2.Text = "Схема 2";
-			// 
-			// save2
-			// 
-			this.save2.Location = new System.Drawing.Point(569, 79);
-			this.save2.Name = "save2";
-			this.save2.Size = new System.Drawing.Size(100, 23);
-			this.save2.TabIndex = 6;
-			this.save2.Text = "Сохранить";
-			this.save2.UseVisualStyleBackColor = true;
-			this.save2.Click += new System.EventHandler(this.save2_Click);
-			// 
-			// save1
-			// 
-			this.save1.Location = new System.Drawing.Point(119, 79);
-			this.save1.Name = "save1";
-			this.save1.Size = new System.Drawing.Size(100, 23);
-			this.save1.TabIndex = 7;
-			this.save1.Text = "Сохранить";
-			this.save1.UseVisualStyleBackColor = true;
-			this.save1.Click += new System.EventHandler(this.save1_Click);
-			// 
-			// pictureBox1
-			// 
-			this.pictureBox1.BackColor = System.Drawing.SystemColors.Control;
-			this.pictureBox1.Location = new System.Drawing.Point(450, 125);
-			this.pictureBox1.Name = "pictureBox1";
-			this.pictureBox1.Size = new System.Drawing.Size(338, 323);
-			this.pictureBox1.TabIndex = 8;
-			this.pictureBox1.TabStop = false;
+			this.MoveTo2.Location = new System.Drawing.Point(259, 83);
+			this.MoveTo2.Name = "MoveTo2";
+			this.MoveTo2.Size = new System.Drawing.Size(104, 23);
+			this.MoveTo2.TabIndex = 6;
+			this.MoveTo2.Text = "Совместить";
+			this.MoveTo2.UseVisualStyleBackColor = true;
+			this.MoveTo2.Click += new System.EventHandler(this.MoveTo2_Click);
 			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(800, 450);
-			this.Controls.Add(this.pictureBox1);
-			this.Controls.Add(this.save1);
-			this.Controls.Add(this.save2);
-			this.Controls.Add(this.label2);
-			this.Controls.Add(this.label1);
-			this.Controls.Add(this.generate2);
+			this.Controls.Add(this.MoveTo2);
+			this.Controls.Add(this.MoveTo);
+			this.Controls.Add(this.Fragment);
 			this.Controls.Add(this.pictureBox);
 			this.Name = "Form1";
 			this.Text = "Form1";
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			this.ResumeLayout(false);
-			this.PerformLayout();
 
 		}
 
 		#endregion
 
 		private System.Windows.Forms.PictureBox pictureBox;
-		private System.Windows.Forms.Button generate2;
-		private System.Windows.Forms.Label label1;
-		private System.Windows.Forms.Label label2;
-		private System.Windows.Forms.Button save2;
-		private System.Windows.Forms.Button save1;
-		private System.Windows.Forms.PictureBox pictureBox1;
+		private System.Windows.Forms.Button Fragment;
+		private System.Windows.Forms.Button MoveTo;
+		private System.Windows.Forms.Button MoveTo2;
 	}
 }
 

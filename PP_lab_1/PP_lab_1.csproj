@@ -77,10 +77,13 @@
     <Compile Include="Geometry\Algoritm\GetCoeffCurve.cs" />
     <Compile Include="Geometry\Bezier.cs" />
     <Compile Include="Geometry\Algoritm\GetLenghtCurve.cs" />
+    <Compile Include="Geometry\Fragment.cs" />
     <Compile Include="Geometry\ICurve.cs" />
     <Compile Include="Geometry\IPoint.cs" />
     <Compile Include="Geometry\Algoritm\IStrategyGetLenght.cs" />
+    <Compile Include="Geometry\IStrategitaly.cs" />
     <Compile Include="Geometry\Line.cs" />
+    <Compile Include="Geometry\MoveTo.cs" />
     <Compile Include="Geometry\Point.cs" />
     <Compile Include="GraphicsSystem\AGraphicContext.cs" />
     <Compile Include="GraphicsSystem\IGraphicContext.cs" />

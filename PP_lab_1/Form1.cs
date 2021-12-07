@@ -24,17 +24,15 @@ namespace PP_lab_1 {
 		#region Initialize
 		public Form1() {
 			InitializeComponent();
-			
+			var curve = GenerateCurve();
+			curve.Draw();
+			winContext1.Draw();
 		}
 
 		void InitCurve() {
 			if (winContext1 == null) {
 				Graphics g = pictureBox.CreateGraphics();
 				winContext1 = new WinFormGraphics(g);
-			}
-			if(winContext2 == null) {
-				Graphics g2 = pictureBox1.CreateGraphics();
-				winContext2 = new WinFormGraphics(g2);
 			}
 			if (svgContext == null) {
 				SvgDocument doc = new SvgDocument();
@@ -48,12 +46,6 @@ namespace PP_lab_1 {
 			if (winContext1 == null || winContext2 == null) InitCurve();
 			var curve = GenerateCurve();
 			curve.Draw();
-			curve.SetDrawScheme(new DrawScheme2(winContext2));
-			curve.Draw();
-			float lenght = curve.Curve.GetAlgoritm(0.5f, 0.01f, new GetLenghtCurve());
-			winContext1.Add(new GraphicsSystem.GraphicsObjects.Circle(
-				curve.Curve.GetPoint(curve.Curve.GetAlgoritm(lenght,0.01f, new GetCoeffCurve())),
-				Color.Black,5f,5f));
 			winContext1.Draw();
 		}
 		private void save1_Click(object sender, EventArgs e) {
@@ -79,6 +71,17 @@ namespace PP_lab_1 {
 		private Geometry.Point RandomPoint => new Geometry.Point(
 			rnd.Next(0, pictureBox.Width), 
 			rnd.Next(0, pictureBox.Height));
-		
+
+		private void Fragment_Click(object sender, EventArgs e) {
+
+		}
+
+		private void MoveTo_Click(object sender, EventArgs e) {
+
+		}
+
+		private void MoveTo2_Click(object sender, EventArgs e) {
+
+		}
 	}
 }

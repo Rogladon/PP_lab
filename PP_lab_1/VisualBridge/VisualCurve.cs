@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Geometry;
+using Geometry.Algoritm;
 
 namespace Visual {
 	/// <summary>
@@ -45,14 +46,14 @@ namespace Visual {
 		#endregion
 
 		#region Realization ICurve
-		public void GetPoint(double t, out IPoint p) {
-			curve.GetPoint(t, out p);
-		}
-
 		public IPoint GetPoint(double t) {
 			return curve.GetPoint(t);
 		}
+
+		public float GetAlgoritm(float coeff, float step, IStrategyGetLenght strategy) {
+			return curve.GetAlgoritm(coeff, step, strategy);
+		}
 		#endregion
-		
+
 	}
 }

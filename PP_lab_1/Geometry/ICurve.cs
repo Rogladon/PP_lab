@@ -10,12 +10,6 @@ namespace Geometry {
 		/// Выдает точку лежащую на кривой
 		/// </summary>
 		/// <param name="t">От 0(начало кривой) до 1(конец кривой)</param>
-		/// <param name="p"></param>
-		void GetPoint(double t, out IPoint p);
-		/// <summary>
-		/// Выдает точку лежащую на кривой
-		/// </summary>
-		/// <param name="t">От 0(начало кривой) до 1(конец кривой)</param>
 		/// <returns></returns>
 		IPoint GetPoint(double t);
 		float GetAlgoritm(float coeff, float step, Algoritm.IStrategyGetLenght strategy);
